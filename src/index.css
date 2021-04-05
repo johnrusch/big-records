@@ -30,18 +30,38 @@ code {
 
 .carousel {
   position: relative;
+  height: 93.5vh;
 }
 
 .slide {
   position: absolute;
-  width: 100%
-  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 800ms ease 0s;
+}
+
+.slide h1, .slide h2 {
+  color: white;
+  text-shadow: 2px 2px 1px black;
 }
 
 .slide.active {
-
+  opacity: 1;
+  transition-duration: .2s;
 }
 
 .slideImage {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }

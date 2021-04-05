@@ -1,17 +1,31 @@
 import React, { useState, useEffect } from "react";
-import Slide from "./Slide";
 
 const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const { length } = slides;
 
   useEffect(() => {
-    setTimeout(goToNext, 1000);
+    setTimeout(goToNext, 7000);
+    return function () {
+      clearTimeout(goToNext);
+    };
   });
 
   const mapSlides = (slides) => {
     return slides.map((slide, idx) => {
-      return <Slide slide={slide} idx={idx} />;
+      return (
+        <div
+          key={idx}
+          className={idx === current ? "slide active" : "slide"}
+          aria-hidden={idx !== current}
+        >
+          <div>
+            <h1>{slide.title}</h1>
+            <h2>{slide.subtitle}</h2>
+          </div>
+          {idx === current && <img className="slideImage" src={slide.image} alt={`Image for ${slide.title}`} />}
+        </div>
+      );
     });
   };
 
@@ -23,13 +37,7 @@ const Carousel = ({ slides }) => {
     return null;
   }
 
-  return (
-    <section className="carousel">
-        {mapSlides(slides)}
-    </section>
-   );
-
-
+  return <section className="carousel">{mapSlides(slides)}</section>;
 };
 
 export default Carousel;
