@@ -15,9 +15,9 @@ code {
 .navbar {
   background-color: #ffdc1c;
   color: white;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .pageLinks {
@@ -28,9 +28,16 @@ code {
   display: flex;
 }
 
+.navlink {
+  padding: 1rem;
+}
+
 .carousel {
+  display: block;
   position: relative;
   height: 93.5vh;
+  left: 0px;
+  transition: all 800ms ease 0s;
 }
 
 .slide {
@@ -43,7 +50,6 @@ code {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: all 800ms ease 0s;
 }
 
 .slide h1, .slide h2 {
@@ -53,7 +59,7 @@ code {
 
 .slide.active {
   opacity: 1;
-  transition-duration: .2s;
+  transition-duration: .4s;
 }
 
 .slideImage {
