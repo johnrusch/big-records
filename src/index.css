@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
+
+
 .navbar {
   background-color: #ffdc1c;
   color: white;
@@ -32,8 +34,15 @@ code {
   padding: 1rem;
 }
 
+
+
+.carouselParent {
+  width: 100%;
+  overflow: hidden;
+}
+
 .carousel {
-  display: block;
+  display: flex;
   position: relative;
   height: 93.5vh;
   left: 0px;
@@ -41,7 +50,7 @@ code {
 }
 
 .slide {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -49,7 +58,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
 }
 
 .slide h1, .slide h2 {
@@ -58,12 +67,10 @@ code {
 }
 
 .slide.active {
-  opacity: 1;
   transition-duration: .4s;
 }
 
 .slideImage {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
