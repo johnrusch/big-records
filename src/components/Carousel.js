@@ -9,11 +9,11 @@ const Carousel = ({ slides }) => {
   const fullWidth = width * length;
 
   useEffect(() => {
-    setTimeout(goToNext, 1000);
+    setTimeout(goToNext, 3000);
     return function () {
       clearTimeout(goToNext);
     };
-  }, [current]);
+  });
   // console.log(transformWidth )
 
   const mapSlides = (slides) => {
@@ -43,7 +43,9 @@ const Carousel = ({ slides }) => {
 
   const goToNext = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
-    setTransformWidth(Math.abs(transformWidth - width) === fullWidth ? 0 : transformWidth - width);
+    let tempWidth = -Math.abs(width * current).toString();
+    // let tempWidthString = tempWidth;
+    setTransformWidth(tempWidth + "px");
   };
 
   if (!Array.isArray(slides) || slides.length <= 0) {
@@ -53,11 +55,10 @@ const Carousel = ({ slides }) => {
   return (
     <div className="carouselParent">
       <section
-        id="ass"
         className="carousel"
         style={{
           width: fullWidth,
-          transform: `translate3d(${transformWidth}, 0, 0)`
+          transform: `translate3d(${transformWidth}, 0, 0)`,
         }}
       >
         {mapSlides(slides)}
