@@ -4,49 +4,36 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 const PictureGrid = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const [transformWidth, setTransformWidth] = useState(0);
-  const { length } = slides;
   const { height, width } = useWindowDimensions();
-  const fullWidth = width * length;
+  const [pic, setPic] = useState();
 
-  useEffect(() => {
-    setTimeout(goToNext, 3000);
-    return function () {
-      clearTimeout(goToNext);
-    };
-  });
-  // console.log(transformWidth )
+
+
 
   const mapPic = (url) => {
     return (
       <img
         className="pic"
         style={{ width: width * 0.125, height: height * 0.166 }}
-        alt={`Image for ${slide.title}`}
-        src={url}
+        src={() => {
+            
+        }}
       />
     );
   };
 
-  const goToNext = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-    let tempWidth = -Math.abs(width * current).toString();
-    // let tempWidthString = tempWidth;
-    setTransformWidth(tempWidth + "px");
-  };
-
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
-  }
-
   return (
-    <div className="carouselParent">
+    <div className="picGridParent">
       <section
-        className="carousel"
+        className="picGrid"
         style={{
-          width: fullWidth
+          width: width
         }}
       >
-        {mapSlides(slides)}
+        {mapPic(`https://picsum.photos/200/?random=1`)}
+        {mapPic(`https://picsum.photos/200/?random=2`)}
+        {mapPic(`https://picsum.photos/200/?random=3`)}
+        {mapPic(`https://picsum.photos/200/?random=4`)}
       </section>
       ;
     </div>
