@@ -12,14 +12,23 @@ code {
     monospace;
 }
 
+.app {
+  position: relative;
+}
 
 
 .navbar {
-  background-color: #ffdc1c;
-  color: white;
+  background-color: transparent;
+  color: black;
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .pageLinks {
@@ -39,12 +48,13 @@ code {
 .carouselParent {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .carousel {
   display: flex;
   position: relative;
-  height: 93.5vh;
+  height: 100vh;
   left: 0px;
   transition: all 800ms ease 0s;
 }
@@ -78,3 +88,4 @@ code {
   object-fit: cover;
   z-index: -1;
 }
+

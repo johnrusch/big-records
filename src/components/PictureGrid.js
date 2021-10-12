@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
-const Carousel = ({ slides }) => {
+const PictureGrid = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const [transformWidth, setTransformWidth] = useState(0);
   const { length } = slides;
@@ -16,29 +16,16 @@ const Carousel = ({ slides }) => {
   });
   // console.log(transformWidth )
 
-  const mapSlides = (slides) => {
-    return slides.map((slide, idx) => {
-      return (
-        <div
-          key={idx}
-          className={idx === current ? "slide active" : "slide"}
-          aria-hidden={idx !== current}
-          style={{ width: width }}
-        >
-          <div style={{ position: "absolute" }}>
-            <h1>{slide.title}</h1>
-            <h2>{slide.subtitle}</h2>
-          </div>
-          <img
-            className="slideImage"
-            src={slide.image}
-            alt={`Image for ${slide.title}`}
-          />
-        </div>
-      );
-    });
+  const mapPic = (url) => {
+    return (
+      <img
+        className="pic"
+        style={{ width: width * 0.125, height: height * 0.166 }}
+        alt={`Image for ${slide.title}`}
+        src={url}
+      />
+    );
   };
-
 
   const goToNext = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -56,8 +43,7 @@ const Carousel = ({ slides }) => {
       <section
         className="carousel"
         style={{
-          width: fullWidth,
-          transform: `translate3d(${transformWidth}, 0, 0)`,
+          width: fullWidth
         }}
       >
         {mapSlides(slides)}
@@ -67,4 +53,4 @@ const Carousel = ({ slides }) => {
   );
 };
 
-export default Carousel;
+export default PictureGrid;

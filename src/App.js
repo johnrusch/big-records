@@ -5,7 +5,7 @@ import defaultSlides from './components/defaultSlides';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Navbar />
       <Carousel slides={defaultSlides}/>
     </div>
