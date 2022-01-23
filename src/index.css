@@ -18,12 +18,12 @@ code {
 
 
 .navbar {
-  background-color: transparent;
+  background-color: #F5DA56;
   color: black;
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  position: absolute;
+  position: relative;
   z-index: 10;
   top: 0;
   left: 0;
@@ -87,5 +87,9 @@ code {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+.masonsRoom {
+  background-color: #F5E598;
 }
 

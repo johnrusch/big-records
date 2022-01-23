@@ -1,15 +1,24 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
-import defaultSlides from './components/defaultSlides';
-import PictureGrid from './components/PictureGrid';
+import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import MasonsRoom from "./components/MasonsRoom";
+import Navbar from "./components/Navbar";
+import Carousel from "./components/Carousel";
+import defaultSlides from "./components/defaultSlides";
+import PictureGrid from "./components/PictureGrid";
 
 function App() {
   return (
     <div className="app">
       <Navbar />
-      {/* <Carousel slides={defaultSlides}/> */}
-      <PictureGrid />
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/masons-room" element={<MasonsRoom />} />
+        </Routes>
+        {/* <Carousel slides={defaultSlides}/> */}
+        {/* <PictureGrid /> */}
+      </div>
     </div>
   );
 }
