@@ -8,6 +8,10 @@ import defaultSlides from "./components/defaultSlides";
 import PictureGrid from "./components/PictureGrid";
 
 function App() {
+
+  
+
+
   return (
     <div className="app">
       <Navbar />
