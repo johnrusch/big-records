@@ -17,6 +17,62 @@ code {
   /* position: relative; */
 }
 
+
+.pageLinks {
+  display: flex;
+}
+
+
+
+.carouselParent {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  left: 0px;
+  transition: all 800ms ease 0s;
+}
+
+.slide {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.slide h1,
+.slide h2 {
+  color: white;
+  text-shadow: 2px 2px 1px black;
+}
+
+.slide.active {
+  transition-duration: 0.4s;
+}
+
+.slideImage {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.masonsRoom {
+  background-color: #f5e598;
+}
+
 @media screen and (max-width: 480px) {
   .socialLinks {
     color: white;
@@ -75,59 +131,109 @@ code {
     height: 60px;
     color: white;
   }
+
+  .masonsRoomButton {
+    z-index: 99;
+  }
+
+  .masonsRoomBackground {
+    background-color: #cccccc;
+    position: relative;
+    height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  .volumeIcon {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: fixed;
+    z-index: 10;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0.7;
+    width: 60px;
+    height: 60px;
+  }
+
+  .volumeIcon:hover {
+    opacity: 1;
+  }
+
+  .volume {
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+  }
+
+  .volumeMuted {
+    width: 55px;
+    height: 55px;
+    bottom: 1px;
+  }
 }
 
-.pageLinks {
-  display: flex;
-}
+@media screen and (max-width: 2000px) {
+  .socialLinks {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+  }
+
+  .homeScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .homeBackground1 {
+    background-color: black;
+    height: 100vh;
+    max-width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+  }
+
+  .homeBackground2 {
+    background-color: #cccccc;
+    position: relative;
+    height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  /* .homeBackgroundVideo {
+    top: 0;
+  } */
 
 
+  .navlink {
+    margin: 20px 30px;
 
-.carouselParent {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
+  }
 
-.carousel {
-  display: flex;
-  position: relative;
-  height: 100vh;
-  left: 0px;
-  transition: all 800ms ease 0s;
-}
-
-.slide {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-}
-
-.slide h1,
-.slide h2 {
-  color: white;
-  text-shadow: 2px 2px 1px black;
-}
-
-.slide.active {
-  transition-duration: 0.4s;
-}
-
-.slideImage {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.masonsRoom {
-  background-color: #f5e598;
+  .navIcon {
+    width: 60px;
+    height: 60px;
+    color: white;
+  }
 }
