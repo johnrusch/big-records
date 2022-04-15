@@ -45,7 +45,7 @@ const Home = () => {
           style={{ bottom: height / 7 }}
           className="masonsRoomButton"
         >
-          <div style={{ fontSize: "3rem", color: "white" }}>🐰Mason's🍎Place🐰</div>
+          🐰Mason's🍎Place🐰
         </Link>
       </div>
     </div>
