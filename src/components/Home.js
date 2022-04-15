@@ -5,6 +5,7 @@ import defaultSlides from "./defaultSlides";
 import SocialLinks from "./SocialLinks";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import { ReactComponent as InstagramIcon } from "../assets/svgs/instagram-icon.svg";
+import { ReactComponent as TwitterIcon } from "../assets/svgs/twitter-icon.svg";
 
 const Home = () => {
   const { height, width } = useWindowDimensions();
@@ -21,26 +22,31 @@ const Home = () => {
 
   return (
     <div className="homeScreen">
-      <SocialLinks />
+      <SocialLinks>
+        <InstagramIcon
+          fill="white"
+          className="navIcon"
+          link="https://www.instagram.com/bigrecordsusa/"
+        />
+        <TwitterIcon
+          fill="white"
+          className="navIcon"
+          link="https://twitter.com/bigrecordsusa"
+        />
+      </SocialLinks>
       <div className="homeBackground1">
         <img
-          style={{ width }}
+          style={{ width, height: height / 2 }}
           src="https://big-records.s3.us-west-2.amazonaws.com/assets/ezgif.com-gif-maker.gif"
           alt="big records background"
         />
-      </div>
-      <Link to="/masons-room">
-        <div className="masonsRoomButton">
-          <h1>Masons Room</h1>
-        </div>
-      </Link>
-      <div style={{ height }} className="homeBackground2">
-        <video autoPlay muted loop className="homeBackgroundVideo">
-          <source
-            src="https://big-records.s3.us-west-2.amazonaws.com/assets/m4aod+art+dark+video-HD+1080p.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <Link
+          to="/masons-room"
+          style={{ bottom: height / 7 }}
+          className="masonsRoomButton"
+        >
+          <div style={{ fontSize: "3rem", color: "white" }}>🐰Mason's🍎Place🐰</div>
+        </Link>
       </div>
     </div>
   );
