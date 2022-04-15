@@ -16,9 +16,8 @@ const SocialLinks = ({ children }) => {
     });
   };
 
-  console.log(React.Children);
 
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   return (
     <header style={{ width }} className="socialLinks">
       {renderChildren()}

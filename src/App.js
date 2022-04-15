@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
-import MasonsRoom from "./components/MasonsRoom";
+import MasonsPlace from "./components/MasonsPlace";
 import Navbar from "./components/SocialLinks";
 import Carousel from "./components/Carousel";
 import defaultSlides from "./components/defaultSlides";
@@ -12,7 +12,7 @@ function App() {
     <div className="app">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/masons-room" element={<MasonsRoom />} />
+        <Route path="/masons-place" element={<MasonsPlace />} />
       </Routes>
     </div>
   );

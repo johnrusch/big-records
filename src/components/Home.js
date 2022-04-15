@@ -41,7 +41,7 @@ const Home = () => {
           alt="big records background"
         />
         <Link
-          to="/masons-room"
+          to="/masons-place"
           style={{ bottom: height / 7 }}
           className="masonsRoomButton"
         >

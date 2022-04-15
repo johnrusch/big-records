@@ -5,7 +5,7 @@ import { ReactComponent as VolumeMute } from "../assets/svgs/volume-mute.svg";
 import { ReactComponent as LinkTree } from "../assets/svgs/linktree-white.svg";
 import SocialLinks from "./SocialLinks";
 
-const MasonsRoom = () => {
+const MasonsPlace = () => {
   const [audioMuted, setAudioMuted] = useState(true);
   const [audioElement, setAudioElement] = useState(
     document.getElementById("audioElement")
@@ -39,7 +39,6 @@ const MasonsRoom = () => {
     const audioElement = document.getElementById("audioElement");
     setAudioElement(audioElement);
     audioElement.addEventListener("canplay", () => setLoading(false));
-    console.log(audioElement);
   }, [audioElement]);
 
   return (
@@ -69,4 +68,4 @@ const MasonsRoom = () => {
   );
 };
 
-export default MasonsRoom;
+export default MasonsPlace;
