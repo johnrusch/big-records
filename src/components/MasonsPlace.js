@@ -51,7 +51,7 @@ const MasonsPlace = () => {
         />
       </SocialLinks>
       <audio id="audioElement" loop autoPlay muted={audioMuted}>
-        <source src="http://35.165.227.26:8000/masons_room" type="audio/mpeg" />
+        <source src="https://icecast.pistachiovillage.link:8000/masons_room" type="audio/mpeg" />
       </audio>
       <div className="masonsRoomBackground" style={{ height, width }}>
         <video autoPlay loop muted poster>
