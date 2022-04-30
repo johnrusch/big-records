@@ -41,11 +41,11 @@ const Home = () => {
           alt="big records background"
         />
         <Link
-          to="/masons-place"
+          to="/masons-ordinary-world"
           style={{ bottom: height / 7 }}
           className="masonsRoomButton"
         >
-          🐰Mason's🍎Place🐰
+          🐰Mason's🍎Ordinary🍎World🐰
         </Link>
       </div>
     </div>
