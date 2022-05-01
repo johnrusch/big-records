@@ -13,11 +13,6 @@ code {
     monospace;
 }
 
-.app {
-  /* position: relative; */
-}
-
-
 .pageLinks {
   display: flex;
 }
