@@ -36,7 +36,7 @@ const Home = () => {
       </SocialLinks>
       <div className="homeBackground1">
         <img
-          style={{ width, height: height / 2 }}
+          style={{ width, height: height / 2, objectFit: 'fill' }}
           src="https://big-records.s3.us-west-2.amazonaws.com/assets/ezgif.com-gif-maker.gif"
           alt="big records background"
         />

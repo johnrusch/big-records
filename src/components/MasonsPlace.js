@@ -53,10 +53,10 @@ const MasonsPlace = () => {
       <audio id="audioElement" loop autoPlay muted={audioMuted}>
         <source src="https://icecast.pistachiovillage.link:8000/masons_room" type="audio/mpeg" />
       </audio>
-      <div className="masonsRoomBackground" style={{ height, width }}>
-        <video autoPlay loop muted poster>
+      <div className="masonsRoomBackground" >
+        <video autoPlay loop muted style={{ height, width, objectFit: 'fill' }}>
           <source
-            src="https://big-records.s3.us-west-2.amazonaws.com/assets/editedMasonMovie.mp4"
+            src="https://big-records.s3.us-west-2.amazonaws.com/assets/mason's+room+tracklist.mp4"
             type="video/mp4"
           />
         </video>
