@@ -40,13 +40,13 @@ const Home = () => {
           src="https://big-records.s3.us-west-2.amazonaws.com/assets/ezgif.com-gif-maker.gif"
           alt="big records background"
         />
-        <Link
+        {/* <Link
           to="/masons-ordinary-world"
           style={{ bottom: height / 7 }}
           className="masonsRoomButton"
         >
           🐰Mason's🍎Ordinary🍎World🐰
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
